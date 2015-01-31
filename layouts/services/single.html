@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="page-services-and-prices">
+{{ partial "header.html" . }}
+<div id="page">
+  {{ partial "title.html" . }}
+  <div class="container clearfix" id="main-content">
+    <div class="row-fluid sidebar-right">
+      <div class="span9 primary-column">
+        <img src="{{.Params.image}}=w800" class="aligncenter" alt=""/>
+        {{.Content}}
+      </div>
+      <section class="span3 sidebar secondary-column" id="secondary-nav">
+        <aside class="widget">
+          <h5 class="short_headline"><span>Услуги</span></h5>
+          <ul class="navigation">
+            {{ range where .Site.Pages "Type" "service"}}
+            <li>
+              <i class="icon-angle-right"></i>
+              <a href="/services/#{{.Params.section}}">{{.Title}}</a>
+            </li>
+            {{ end }}
+          </ul>
+        </aside>
+        <aside class="widget">
+          <h5 class="short_headline"><span>Типовые проекты</span></h5>
+          <ul class="navigation">
+            {{ range where .Site.Pages "Section" "services"}}
+              {{ if isset .Params "services" }}
+              <li>
+                <i class="icon-angle-right"></i>
+                <a href="{{.Permalink}}">{{.Title}}</a>
+              </li>
+              {{end}}
+            {{end}}
+          </ul>
+        </aside>
+      </section>
+    </div>
+  </div>
+</div>
+<footer id="footer" class="clearfix">
+  {{ partial "footer.html" . }}
+</footer>
+<span class="backToTop"><a href="#top">наверх</a></span>
+</body>
+</html>

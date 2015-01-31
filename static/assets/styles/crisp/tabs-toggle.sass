@@ -1,0 +1,305 @@
+/*	No JS styles
+
+.no-js
+  li.st-content-wrapper, .s-accordion li.s-wrap div.s-content
+    overflow: visible !important
+    height: auto !important
+  li.st-content-wrapper .st-content, .s-accordion li.s-wrap div.s-content
+    display: block !important
+    clear: both !important
+    visibility: visible !important
+    overflow: visible !important
+  .sidebar-tabs .panels .pane, .content-tabs .panels .pane
+    display: block !important
+    visibility: visible !important
+    clear: both !important
+
+/*	Slide to Top Accordion for short headers
+
+.slide-to-top
+  .trigger i
+    position: absolute
+    right: 10px
+  .st-open .trigger i:before
+    content: "\f078"
+  width: 100%
+  margin-bottom: 4%
+  ul.accordion-st-wrapper
+    width: 100%
+    padding: 0
+    margin: 0
+
+li.st-content-wrapper
+  height: 49px
+  overflow: hidden
+  list-style: none
+  margin: 0
+  padding: 0
+  border-top: 1px solid #ddd
+  border-bottom: 3px solid transparent
+  .trigger
+    font-size: 25px
+    display: block
+    position: relative
+    line-height: 50px
+    padding: 0 10px
+    background: #f8f8f8
+    outline: none
+    cursor: pointer
+    text-decoration: none
+  .st-content
+    padding: 2% 3%
+    border-left: 1px solid #ddd
+
+/*	Fancy Styles for Slide to Top Accordion for short headers
+
+.slide-to-top.fancy li.st-content-wrapper
+  height: 49px
+  border: 0px
+  border-bottom: 3px solid transparent
+  .trigger
+    line-height: 50px
+    background: #a3b0bb
+    color: #fff
+    -webkit-border-radius: 8px
+    -moz-border-radius: 8px
+    border-radius: 8px
+  &.st-open .trigger
+    background: #c7cfd6
+    -webkit-border-radius: 8px 8px 0 0
+    -moz-border-radius: 8px 8px 0 0
+    border-radius: 8px 8px 0 0
+  .st-content
+    padding: 2% 3%
+    border: 1px solid #d8dfe5
+    background: #f7f7f9
+    -webkit-border-radius: 0 0 8px 8px
+    -moz-border-radius: 0 0 8px 8px
+    border-radius: 0 0 8px 8px
+    margin-bottom: 4px
+    margin-top: 3px
+
+/*	Simple Accordion for unknown length headers (NOT FAQ) see below for faq styles
+
+.s-accordion
+  margin: 0 0 4% 0
+  padding: 0
+  width: 100%
+  li.s-wrap
+    list-style: none
+  .trigger
+    margin: 0
+    padding: 0
+    a
+      display: block
+      padding: 5px 35px 5px 10px
+      position: relative
+      text-decoration: none
+      background: #f8f8f8
+      border-top: 1px solid #ddd
+      margin-bottom: 3px
+    i
+      position: absolute
+      right: 10px
+      top: 5px
+  li.s-wrap div.s-content
+    padding: 2% 3%
+    border-left: 1px solid #ddd
+  .trigger .active i:before
+    content: "\f078"
+  &.faq .trigger
+    .active i:before
+      content: "\f056"
+    a
+      padding: 5px 10px 5px 35px
+    i
+      position: absolute
+      right: auto
+      left: 10px
+      top: 5px
+  &.fancy
+    margin: 0 0 4% 0
+    padding: 0
+    width: 100%
+    .trigger a
+      display: block
+      padding: 5px 35px 5px 10px
+      position: relative
+      text-decoration: none
+      background: $gray
+      color: #fff
+      border: 0px
+      margin-bottom: 4px
+      -webkit-border-radius: 8px
+      -moz-border-radius: 8px
+      border-radius: 8px
+      &.active
+        background: $green
+        -webkit-border-radius: 8px 8px 0 0
+        -moz-border-radius: 8px 8px 0 0
+        border-radius: 8px 8px 0 0
+    &.faq .trigger a
+      padding: 5px 10px 5px 35px
+    .trigger i
+      position: absolute
+      right: 10px
+      top: 7px
+    &.faq .trigger i
+      position: absolute
+      right: auto
+      left: 10px
+      top: 7px
+    li.s-wrap div.s-content
+      padding: 2% 3%
+      border: 1px solid #d8dfe5
+      background: #f7f7f9
+      -webkit-border-radius: 0 0 8px 8px
+      -moz-border-radius: 0 0 8px 8px
+      border-radius: 0 0 8px 8px
+      margin-bottom: 4px
+    .trigger .active i:before
+      content: "\f078"
+    &.faq .trigger .active i:before
+      content: "\f056"
+
+/*	FAQ Simple Accordion for unknown length headers
+
+/*	Simple Accordion Fancy Styles
+
+/* end fancy styles on simple accordion
+
+/*	Side Bar Tabs
+
+.sidebar-tabs
+  padding: 0
+  margin: 0
+  .tabs
+    margin: 0 0 5px
+    padding: 0
+    *zoom: 1
+  .tab
+    float: left
+    margin: 0 5px 5px 0
+    font-size: 11px
+    list-style: none
+    a
+      display: block
+      padding: 5px 8px
+      text-decoration: none
+      background-image: url(../img/7p.png)
+      -webkit-border-radius: 5px
+      -moz-border-radius: 5px
+      border-radius: 5px
+      &:hover, &.active
+        background: #758694
+        color: #fff
+  .panels
+    clear: both
+    position: relative
+    padding: 10px 0
+    margin: 0
+
+/*	Content Tabs
+
+.content-tabs
+  padding: 0
+  margin: 0 0 4% 0
+  .tabs
+    margin: 0 0 5px
+    padding: 0
+  .tab
+    float: left
+    margin: 0 5px 5px 0
+    list-style: none
+    a
+      display: block
+      padding: 10px 15px
+      text-decoration: none
+      background-image: url(../img/7p.png)
+      -webkit-border-radius: 8px 8px 0 0
+      -moz-border-radius: 8px 8px 0 0
+      border-radius: 8px 8px 0 0
+      &:hover, &.active
+        background: #758694
+        color: #fff
+  .panels
+    clear: both
+    position: relative
+    padding: 2% 3%
+    border: 1px solid #d8dfe5
+    border-bottom: 5px solid #c7cfd6
+
+/* clearing all
+
+.st-content, .content-tabs .panels .pane, div.s-content
+  *zoom: 1
+
+.st-content
+  &:before, &:after
+    display: table
+    content: ""
+    line-height: 0
+
+.content-tabs .panels .pane
+  &:after, &:before
+    display: table
+    content: ""
+    line-height: 0
+
+.s-content
+  &:before, &:after
+    display: table
+    content: ""
+    line-height: 0
+
+.st-content:after, .content-tabs .panels .pane:after, .s-content:after
+  clear: both
+
+/*DEVICES less than 767 pixels wide
+@media only screen and (max-width: 767px)
+  .content-tabs
+    padding: 0
+    margin: 0 0 4% 0
+    border: 1px solid #d8dfe5
+    border-bottom: 1px solid #c7cfd6
+    padding: 2%
+    .panels
+      clear: both
+      position: relative
+      padding: 2% 0 0 0
+      border: 0px solid #d8dfe5
+      border-bottom: 0px solid #c7cfd6
+    .tab a
+      -webkit-border-radius: 5px
+      -moz-border-radius: 5px
+      border-radius: 5px
+  li.st-content-wrapper
+    height: 30px
+    a.trigger
+      font-size: 14px
+      line-height: 30px
+
+/*DEVICES less than 400 pixels wide
+@media only screen and (max-width: 400px)
+  li.st-content-wrapper
+    height: 30px
+    a.trigger
+      font-size: 12px
+      line-height: 30px
+
+/*Print Media Styles
+@media print
+  li.st-content-wrapper, .s-accordion li.s-wrap div.s-content
+    overflow: visible !important
+    height: auto !important
+  li.st-content-wrapper .st-content, .s-accordion li.s-wrap div.s-content
+    display: block !important
+    clear: both !important
+    visibility: visible !important
+    overflow: visible !important
+  .sidebar-tabs .panels .pane, .content-tabs .panels .pane
+    display: block !important
+    visibility: visible !important
+    clear: both !important
+
+/*end print

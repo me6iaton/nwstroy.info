@@ -1,0 +1,642 @@
+// Core variables and mixins
+@import "../sass-twitter-bootstrap/variables"
+
+/* user nav
+ *==================================================
+body.login nav.user
+	display: none !important
+
+/* hide the login on the login page duh ;-)
+nav.user
+	float: left
+	line-height: 43px
+	a
+		text-decoration: none
+		float: left
+		padding: 0 5px
+		margin-right: 5px
+		color: #758694
+		&:hover
+			color: #53a3b7
+
+body.tall-logo nav.user
+	margin-left: 180px
+
+/* header / logo (desktop)
+ *==================================================
+#logo
+	/* width and height of logo desktop NON retina - this is the regular size logo
+	//width: 140px
+	//height: 59px
+	a
+		text-decoration: none
+		color: $green
+		h2
+			display: inline-block
+			margin-left: 7px
+			color: $green
+		img
+			/* width and height of logo desktop NON retina - this is the regular size logo
+			//width: 140px
+			//height: 59px
+		padding: 0 0 10px 0
+		float: left
+		position: relative
+		margin-top: 20px
+		//background: url(../img/logo.png) no-repeat
+	.underconstr
+		position: absolute
+		width: 180px
+		display: block
+		left: 270px
+		i
+			position: absolute
+			top: 8px
+			left: -50px
+			font-size: 2em
+			//text-align: center
+/* ie 7 fix
+.lt-ie8 #logo
+	position: absolute !important
+	top: 0
+	left: 0
+
+#logo em
+	position: absolute
+	display: block
+	top: -1000px
+	left: 100px
+	width: 1px
+	height: 1px
+	overflow: hidden
+
+.header
+	margin: 0 auto 3% auto
+	position: relative
+	clear: both
+	padding: 0
+	background: $grayDark
+	z-index: 999
+.page-index
+	.header
+		margin: 0 auto
+/* tall logo resets (desktop)
+ *==================================================
+.tall-logo
+	#logo
+		/* - this is the tall size logo NON retina
+		width: 170px
+		height: 185px
+		img
+			/* - this is the tall size logo NON retina
+			width: 170px
+			height: 185px
+		margin-top: 0
+		padding: 0
+		top: -47px
+		background-image: url(../img/tall-logo-desktop.png)
+		background-color: transparent
+		background-position: 50% 50%
+		background-repeat: no-repeat
+	.header
+		height: 95px
+/*height of navigation
+.lt-ie8 .tall-logo .header
+	margin-bottom: 100px !important
+
+/*end tall logo tall header resets
+/* header / preheader / menu
+ *==================================================
+.header .container
+	position: relative
+
+.container.preheader
+	right: -10px
+	position: relative
+	form
+		margin: 0
+		padding: 0
+		height: 30px
+
+.search-wrapper
+	float: right
+	padding: 5px 0 0 0
+
+.search
+	#search-trigger
+		font-size: 0.75em
+		font-weight: bold
+		color: #333
+		text-indent: -9999em
+		display: block
+		float: left
+		padding: 0
+		margin: 0
+		width: 30px
+		height: 30px
+		position: relative
+		top: 3px
+		background: url(../img/search.png) 0px 50% no-repeat
+		cursor: pointer
+		&.active
+			background: url(../img/search.png) -30px 50% no-repeat
+	input
+		background-color: #fff
+		width: 200px
+		margin-left: 5px
+		top: 3px
+		position: relative
+		font-size: 16px
+		-webkit-appearance: textfield
+
+.js .search input
+	display: none
+
+.preheader
+	.phone
+		float: right
+		line-height: 45px
+		margin-right: 10px
+		padding: 0 15px 0 10px
+		border-right: 1px solid #d8dfe5
+		a
+			color: #758694
+		color: #758694
+	.social
+		float: right
+		line-height: 30px
+		height: 45px
+		border-right: 1px solid #d8dfe5
+		margin-right: 0
+		position: relative
+		padding-right: 20px
+
+.lt-ie9 .preheader .social
+	margin-right: 0
+	padding-right: 20px
+
+.preheader .social
+	a
+		color: #758694
+		position: relative
+		top: 10px
+		position: relative
+		text-decoration: none
+		&:before
+			font-size: 22px
+			line-height: 25px
+			padding: 0 5px 0 5px
+	.tooltip
+		.tooltip-inner
+			background: #d8dfe5
+			color: #576674
+		&.bottom .tooltip-arrow
+			border-bottom-color: #d8dfe5
+
+/* main navigation / desktop styles
+ *==================================================
+.mobile_nav
+	display: none
+
+/* hide trigger for desktop
+#main_menu
+	padding: 0
+	z-index: 999
+	right: -12px
+	clear: none
+	position: relative
+	float: right
+	top: 0
+	li.parent i
+		background: url(../img/menu_arrow.png) 0 0 no-repeat
+		display: inline-block
+		width: 5px
+		margin-left: 8px
+		height: 5px
+		position: relative
+		top: -2px
+
+.lt-ie8 #main_menu .parent i
+	position: relative
+	display: inline
+	zoom: 1
+	left: 5px
+	top: -4px
+
+#main_menu
+	ul
+		ul
+			li.parent i
+				/* third level
+				background-position: -5px 0
+			margin: 0
+			padding: 0
+			display: none
+		float: right
+		margin: 0
+		padding: 0
+		position: relative
+		list-style: none
+	li
+		float: left
+		margin: 0 0 0 2px
+		padding: 0
+		position: relative
+		background: $grayDark
+		text-transform: lowercase
+		a
+			border: none
+			color: #fff
+			display: block
+			height: 95px
+			line-height: 95px
+			margin: 0 !important
+			padding: 0 12px
+			text-decoration: none
+			font-size: 110%
+		&.parent.foo a
+			background: inherit
+	a:hover, .active a, a.selected, li.parent.foo.active a
+		background: $green
+		color: #fff
+	ul li ul li a
+		font-size: 100%
+
+/* first level
+/* sub level
+.lt-ie9 #main_menu ul li ul li a
+	font-size: 100%
+
+#main_menu
+	//ul
+	//	li ul li a
+	//		text-transform: none
+	//		ul
+	//			a.selected, .active, a:hover
+	//				text-transform: none
+	li.active ul
+		a
+			background-color: inherit
+			*background-color: transparent
+		li.active a
+			background-color: $green
+	ul li ul li
+		background: $gray
+		/* second level bg color
+		float: none
+		left: auto
+		margin: 0
+		top: 0
+		width: 100%
+		ul li
+			background: #758694
+	/* third level bg color
+	li
+		li
+			border-bottom: 1px solid $white
+		ul
+			a
+				height: auto
+				line-height: 1.5
+				padding: 7px 10px
+				width: 175px
+				color: #fff
+			li
+				a, ul li a
+					height: auto
+					line-height: 1.5
+					padding: 7px 10px
+					width: 175px
+					color: #fff
+			background: #6d767e
+			left: 0
+			padding: 0
+			position: absolute
+			top: 95px
+			z-index: 1000
+			ul
+				border-top: 0px
+				z-index: 100000
+			a:hover
+				background: $green
+	ul ul ul
+		border: none
+		top: 0 !important
+		left: 195px
+	li ul li ul
+		padding: 0
+		position: absolute
+		top: 0
+	ul li ul li ul li ul li a
+		background: #333
+
+/* second level
+/* third level +
+/* fourth level + bad idea to have more than two levels
+/*=================== ie7 fix
+.lt-ie8 #main_menu ul ul ul
+	display: none
+
+/* js off
+.no-js
+	#main_menu
+		ul li:hover ul ul
+			display: block
+		li:hover ul
+			display: block
+			li:hover ul
+				display: block
+	&.lt-ie8 #main_menu ul ul li:hover ul
+		display: block
+
+/*	BEGIN MEDIA QUERIES
+/*	DEVICES less than 880 pixels wide
+@media only screen and (max-width: 880px)
+	/* Menu Adjustment so items don't cover the logo
+	#main_menu li
+		margin: 0 0 0 2px
+		a
+			padding: 0 10px
+			font-size: 120%
+
+/* end max width 800px
+/*DEVICES less than 800 pixels wide
+@media only screen and (max-width: 800px)
+	/* Menu Adjustment so items don't cover the logo
+	#main_menu li
+		margin: 0
+		a
+			padding: 0 7px
+			font-size: 115%
+
+/* end max width 800px
+/*	DEVICES less than 600 pixels wide
+@media only screen and (max-width: 600px)
+	a.tele
+		cursor: pointer
+		pointer-events: visible
+
+/* end max width 600
+/*DEVICES less than 767 pixels wide
+@media only screen and (max-width: 767px)
+	/* Header / Logo / Preheader Mobile Adjustments
+	nav.user
+		float: right
+		line-height: 55px
+		a
+			margin: 0 10px 0 0
+			padding: 0
+	body.tall-logo nav.user
+		margin-left: 0
+	.header
+		position: relative
+		height: auto
+		margin-top: 50px
+		.container
+			padding: 0
+			width: 100%
+	.page-index
+		.header
+			margin-top: 50px
+	#logo
+		position: relative
+		background-position: 50% 50%
+		display: block
+		width: 100%
+		height: 59px
+		margin: 0
+		padding: 10px 0 !important
+	/* tall header for taller logo mobile
+	.tall-logo
+		#logo
+			background-image: url(../img/tall-logo-mobile.png)
+			/*notice that this image changes on mobile
+			background-color: transparent !important
+			background-position: 0 0
+			position: relative
+			display: block
+			width: 78px
+			height: 85px
+			margin: 0
+			top: auto
+			left: 45px
+			padding: 0 !important
+		.header
+			height: 60px
+			margin-bottom: 30px
+	/*end tall logo tall header mobile
+	.container.preheader
+		position: absolute
+		top: 0
+		right: 0
+		padding: 0
+		width: 100%
+		.phone
+			border: 0px
+			padding: 5px 0 0 0
+			margin: 0
+			a
+				border: 0px
+				padding: 5px 0 0 0
+				margin: 0
+			margin-right: 10px
+	.preheader .social
+		display: none
+	.search
+		input
+			position: relative
+			width: 180px
+			right: 0
+			top: auto
+			margin: 0 0 0 5px
+			font-size: 16px !important
+			overflow-x: hidden
+		#search-trigger
+			width: 30px
+			margin: 0
+			top: auto
+	.search-wrapper
+		padding: 10px 0 0 0
+		margin: 0
+		position: absolute
+		left: 50px
+		z-index: 2
+	/* Mobile Navigation Trigger
+	.lt-ie9 .mobile_nav
+		display: none
+	.mobile_nav
+		margin: 0
+		display: block
+		position: absolute
+		top: 5px
+		left: 5px
+		height: 40px
+		width: 40px
+		background: $gray
+		z-index: 1
+		a
+			span
+				display: block
+				width: 20px
+				height: 40px
+				padding: 0
+				position: absolute
+				left: 10px
+				top: 0px
+				background: url(../img/navtriggerbg.png) -20px 50% no-repeat
+			&.active span
+				background-position: -60px 50%
+			color: #fff
+			position: relative
+			text-decoration: none
+			display: block
+			padding: 0 0 0 5px
+			height: 40px
+			width: 100%
+			line-height: 38px
+			position: relative
+			z-index: 2000
+	.no-js .mobile_nav, .js #main_menu
+		display: none
+	/* Mobile Navigation
+	#main_menu
+		display: block
+		position: relative
+		z-index: 10
+		width: 100%
+		right: 0
+		ul
+			margin: 0
+			ul
+				height: auto
+				width: 100%
+				overflow: visible
+		*
+			float: none !important
+		ul li a
+			height: auto
+			line-height: normal
+			margin: 0
+			font-size: 100% !important
+			padding: 10px 0 5px 20px
+		li ul
+			a
+				height: auto
+				width: auto
+				line-height: auto
+				background: $gray
+				padding: 8px 0 5px 20px
+			li
+				a, ul li a
+					height: auto
+					width: auto
+					line-height: auto
+					background: $gray
+					padding: 8px 0 5px 20px
+			position: relative !important
+			top: auto !important
+			left: 0 !important
+			clear: both !important
+			right: auto !important
+			width: 100% !important
+		ul
+			position: relative !important
+			top: auto !important
+			left: 0 !important
+			clear: both !important
+			right: auto !important
+			width: 100% !important
+			ul
+				ul
+					position: relative !important
+					top: auto !important
+					left: 0 !important
+					clear: both !important
+					right: auto !important
+					width: 100% !important
+					ul
+						position: relative !important
+						top: auto !important
+						left: 0 !important
+						clear: both !important
+						right: auto !important
+						width: 100% !important
+				border: none
+				display: none
+			border: none
+		li
+			margin: 0
+			a
+				text-transform: uppercase
+			li a
+				text-transform: none
+		ul ul
+			li
+				a
+					padding-left: 30px
+				ul li a
+					padding-left: 50px
+			ul li
+				&:last-child
+					border: 0px
+				border-left: 0px solid #fff
+				border-right: 0px solid #fff
+
+/* end max width 767
+/*	change the webkit number to 1 to test on webkit to make sure
+ *	the sizes and the images show up correctly then switch back before launch
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+	#logo
+		background-image: url(../img/retina/logo_@2x.png)
+		-moz-background-size: 140px 59px
+		/*w & h of total ORIGINAL 72dpi image
+		-ie-background-size: 140px 59px
+		-o-background-size: 140px 59px
+		-webkit-background-size: 140px 59px
+		background-size: 140px 59px
+	.tall-logo #logo
+		background-image: url(../img/retina/tall-logo-mobile_@2x.png)
+		-moz-background-size: 170px 185px
+		/*w & h of total image 72dpi image
+		-ie-background-size: 170px 185px
+		-o-background-size: 170px 185px
+		-webkit-background-size: 170px 185px
+		background-size: 170px 185px
+	.search #search-trigger
+		background-image: url(../img/retina/search_@2x.png)
+		-moz-background-size: 60px 30px
+		/*w & h of total ORIGINAL 72dpi image
+		-ie-background-size: 60px 30px
+		-o-background-size: 60px 30px
+		-webkit-background-size: 60px 30px
+		background-size: 60px 30px
+	#main_menu li.parent i
+		background-image: url(../img/retina/menu_arrow_@2x.png)
+		-moz-background-size: 20px 5px
+		/*w & h of total ORIGINAL 72dpi image
+		-ie-background-size: 20px 5px
+		-o-background-size: 20px 5px
+		-webkit-background-size: 20px 5px
+		background-size: 20px 5px
+
+/* end desktop and main retina swapping
+/*MOBILE SPECIFIC RETINA SWAPPING
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (-o-min-device-pixel-ratio: 3 / 2), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2)
+	.tall-logo #logo
+		background-image: url(../img/retina/tall-logo-mobile_@2x.png)
+		-moz-background-size: 78px 85px
+		/*w & h of total image 72dpi image
+		-ie-background-size: 78px 85px
+		-o-background-size: 78px 85px
+		-webkit-background-size: 78px 85px
+		background-size: 78px 85px
+	.mobile_nav a span
+		background-image: url(../img/retina/navtriggerbg_@2x.png)
+		-moz-background-size: 80px 40px
+		/*w & h of total sprite 72dpi image
+		-ie-background-size: 80px 40px
+		-o-background-size: 80px 40px
+		-webkit-background-size: 80px 40px
+		background-size: 80px 40px
+
+/*end mobile specific retina swapping

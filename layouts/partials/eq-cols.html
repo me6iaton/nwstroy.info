@@ -1,0 +1,74 @@
+<div class="tab-pane" id="pills-basic">
+	<div class="tabbable">
+		<ul class="nav nav-pills" data-trigger="tab">
+			<li class="active"><a href="#tabs4-pane1">Услуги</a></li>
+			<li><a href="#tabs4-pane2">Типовые проекты</a></li>
+			<li><a href="#tabs4-pane3">Работы</a></li>
+			<li><a href="#tabs4-pane4">Последние посты</a></li>
+		</ul>
+		<div class="tab-content pane-wrapper">
+			<div class="tab-pane active">
+				<h3 class="short_headline"><span>Описания услуг</span></h3>
+				<div id="equalHeights" class="row-fluid equalHero">
+					[[getResources?
+					&parents=`5`
+					&tpl=`indexTwoEqualColumnsTpl`
+					&sortby=`{"menuindex":"ASC"}`
+					&hideContainers=`0`
+					&showHidden=`1`
+					&includeContent=`0`
+					&includeTVs=`1`
+					&processTVs=`1`
+					&limit=`10`
+					&depth=`0`
+					]]
+				</div>
+				<!-- close #equalHeights .featured 2 columns -->
+			</div>
+			<div class="tab-pane">
+				<h3 class="short_headline"><span>Типовые проекты</span></h3>
+
+				<!-- begin equalHeights columns 3 -->
+				<div id="equalHeightsA" class="row-fluid equalHero">
+					[[getResources?
+					&parents=`5`
+					&tpl=`indexThreeEqualColumnsTpl`
+					&sortby=`{"menuindex":"ASC"}`
+					&hideContainers=`1`
+					&showHidden=`1`
+					&includeContent=`0`
+					&includeTVs=`1`
+					&processTVs=`1`
+					&limit=`10`
+					&depth=`2`
+					]]
+				</div>
+				<!-- close #equalHeights .featured 3 columns -->
+			</div>
+			<div class="tab-pane">
+				<h3 class="short_headline"><span>Наши работы</span></h3>
+				<!-- begin equalHeights columns 4 -->
+				<div id="equalHeightsB" class="row-fluid equalHero equalHeights">
+					[[getTickets?
+						&parents=`24`
+						&tpl=`indexFourEqualColumnsTpl`
+						&showLog=`0`
+						&includeContent=`0`
+						&includeTVs=`blogImage`
+						&fastMode=`0`
+					]]
+				</div>
+				<!-- close #equalHeights .featured 4 columns -->
+			</div>
+			<div class="tab-pane">
+				<h4>Pane 4 Content</h4>
+				<p>Donec semper vestibulum dapibus. Integer et sollicitudin metus. Vivamus at nisi turpis. Phasellus vel tellus id felis cursus hendrerit. Suspendisse et arcu felis, ac gravida turpis.
+					Suspendisse potenti.</p>
+			</div>
+		</div>
+		<!-- /.tab-content -->
+	</div>
+	<!-- /.tabbable -->
+</div>
+<!-- /.tab-pane -->
+<hr/>

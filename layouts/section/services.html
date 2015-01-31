@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="page-services-and-prices">
+{{ partial "header.html" . }}
+<div id="page">
+  {{range $key, $value := where .Site.Pages "Params.section" .Url }}
+    {{ partial "title.html" . }}
+  {{end}}
+  <div class="container clearfix" id="main-content">
+    <div class="tab-pane" id="pills-stacked">
+      <div class="tabbable row-fluid">
+        <ul class="nav nav-pills nav-stacked span3" data-trigger="tab">
+          {{ range where .Data.Pages "Type" "service"}}
+            <li><a href="#{{.Params.section}}">{{.Title}}</a></li>
+          {{end}}
+        </ul>
+        <div class="tab-content span9 pane-wrapper">
+          {{ range where .Data.Pages "Type" "service"}}
+          {{$section := .Params.section}}
+          <div class="tab-pane">
+            {{.Content}}
+            <div class="hero-unit">
+              <h3>Типовые проекты</h3>
+              <div class="row-fluid">
+                <ul class="thumbnails">
+                  {{ range $.Data.Pages}}
+                    {{ if in .Params.services $section }}
+                  <li class="span6">
+                    <div class="thumbnail">
+                      <a href="{{.Permalink}}"><img src="{{.Params.image}}=w390-h195-p" alt=""></a>
+                      <div class="caption">
+                        <h3>{{.Title}}</h3>
+                        <p>{{.Summary}}</p>
+                        <p class="right"><a href="{{.Permalink}}" class="btn btn-primary ">Подробнее</a>
+                      </div>
+                    </div>
+                  </li>
+                    {{ end }}
+                  {{end}}
+                </ul>
+              </div>
+            </div>
+          </div>
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer id="footer" class="clearfix">
+  {{ partial "footer.html" . }}
+</footer>
+<span class="backToTop"><a href="#top">наверх</a></span>
+</body>
+</html>

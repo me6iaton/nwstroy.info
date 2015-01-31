@@ -1,0 +1,9 @@
+baseurl: "http://nwstroy.info/"
+title: "nwstroy.info"
+author: "Anton Mamrashev"
+copyright: "Copyright (c) 2014, Anton Mamrashev; all rights reserved."
+Taxonomies:
+    tag: "tags"
+    category: "categories"
+    post: "posts"
+    service: "services"

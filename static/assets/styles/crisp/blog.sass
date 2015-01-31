@@ -1,0 +1,328 @@
+/* blog general
+ *==================================================
+
+
+/* blog traditional summary
+ *==================================================
+
+.blog-summary
+	.section
+		margin-bottom: 40px
+	.blog-list-heder
+		line-height: 1.2
+		small
+			margin-top: 0.9rem
+			margin-right: -5px
+.blog-summary,.blog-post
+	.bottom-article
+		.meta-post
+			margin: 0px
+			li
+				list-style: none
+				display: inline-block
+				margin-right: 10px
+				padding-right: 10px
+.blog-post
+	.content
+		margin-bottom: 15px
+
+/* blog detail
+ *==================================================
+
+.blog-detail
+	margin-bottom: 20px
+
+.span9.blog-detail
+	.entry-header, .entry-content, .entry-tags, .entry-pagination, .entry-related
+		float: right
+		width: 87%
+		clear: both
+
+.blog-detail
+	.entry-comments
+		clear: both
+		float: right
+		width: 81%
+	.entry-footer
+		width: 12%
+		display: block
+		margin-right: 2%
+		.addthis_toolbox
+			padding-top: 30px
+			margin-left: 25px
+			width: 16px
+			span
+				margin: 0 auto 10px auto
+	.entry-header
+		background: url(../img/hr.png) 0 100% repeat-x
+		padding-bottom: 10px
+		margin-bottom: 3%
+		position: relative
+		.addthis_toolbox
+			display: none
+
+/*** entry footer *****
+/*** entry header *****
+
+.blog-summary .entry-header
+	padding-bottom: 10px
+	position: relative
+
+.blog-detail .entry-header
+	h1, h2
+		margin-top: 0
+
+/* blog summary grid/filtered masonry
+ *==================================================
+
+.blog-summary-grid
+	li
+		padding: 0 !important
+		background: none
+		div.entry-summary
+			padding: 5px 10px 10px 10px
+			background: #d8dfe5
+	.entry-meta
+		padding-top: 8px
+		font-size: 11px
+		border-top: 1px dotted #a3b0bb
+	li
+		&.quotes .entry-summary
+			background: #758694
+			*
+				color: white
+		a.commentlink
+			font-size: 11px
+			clear: both
+			border-bottom: 1px dotted #a3b0bb
+			display: block
+		h4
+			clear: both
+		&.quotes
+			.entry-summary blockquote
+				color: white
+				background-image: url(../img/open-quote-white.png)
+				font-size: 180%
+				footer
+					font-size: 50%
+			h4
+				display: none
+
+/* Entry Comments
+ *==================================================
+
+.entry-comments
+	background: url(../img/5p.png)
+	padding: 2% 3%
+	h3 a
+		text-decoration: none
+	ul
+		margin: 0
+		padding: 0
+		list-style: none
+	li
+		padding: 10px 0 10px 0
+		margin: 0 0 10px 0
+		background: url(../img/hr.png) 0 100% repeat-x
+	ul ul
+		list-style: none
+		margin: 0 0 0 5%
+		padding: 0
+	footer
+		img
+			float: left
+			width: 50px
+			height: 50px
+		.comment-meta
+			float: left
+			margin-left: 10px
+			font-size: 11px
+			font-size: 1.1rem
+			line-height: 1.4
+			a
+				text-decoration: none
+				border-bottom: 1px dotted #777777
+		.comment-author
+			display: block
+			cite
+				font-style: normal
+				font-weight: bold
+				font-size: 16px
+				font-size: 1.6rem
+				a
+					text-decoration: none
+					border: none
+	.text
+		clear: both
+		padding-top: 10px
+		font-size: 12px
+		font-size: 1.2rem
+
+/* Commment Form
+ *==================================================
+
+#comment-form
+	margin: 20px 0 0 0
+	padding-right: 3%
+	p
+		font-size: 12px
+		font-size: 1.2rem
+		font-style: oblique
+
+.comment_form
+	label
+		font-size: 12px
+		font-size: 1.2rem
+	.btn
+		clear: both
+		margin-top: 10px
+	input
+		&[type="submit"], &[type="button"]
+			clear: both
+			margin-top: 10px
+	span
+		&.name
+			float: left
+			width: 40%
+		&.email
+			float: left
+			width: 60%
+	#name
+		width: 90%
+	#email, textarea, #website
+		width: 100%
+	.error
+		input, textarea
+			border-color: #fa4700
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+			-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+
+/* media queries
+ *==================================================
+@media only screen and (max-width: 1080px)
+	/***  date *****
+	.span6
+		.blog.date
+			width: 50px
+			height: 35px
+			padding-top: 15px
+			-webkit-border-radius: 50px
+			border-radius: 50px
+			.day
+				font-size: 16px
+			.month
+				font-size: 10px
+			.year
+				display: none
+		.blog-detail .date_share .addthis_toolbox
+			clear: both
+			padding-top: 30px
+			margin-left: 15px
+			width: 16px
+
+/*end
+@media only screen and (max-width: 880px)
+	/***  date *****
+	.span9
+		.blog.date
+			width: 50px
+			height: 35px
+			padding-top: 15px
+			-webkit-border-radius: 50px
+			border-radius: 50px
+			.day
+				font-size: 16px
+			.month
+				font-size: 10px
+			.year
+				display: none
+		.blog-detail .date_share .addthis_toolbox
+			clear: both
+			padding-top: 30px
+			margin-left: 15px
+			width: 16px
+
+/*end
+@media only screen and (max-width: 600px)
+	.blog-summary
+		.blog-list-heder
+			small
+				margin-top: 0.3rem
+
+	.blog-detail .addthis_toolbox span
+		margin: 0 auto 10px auto
+	.blog.date, .blog-detail .entry-footer .addthis_toolbox
+		display: none
+	.blog-summary
+		.entry-content, .entry-header
+			width: 100% !important
+			float: none !important
+	.blog-detail
+		.entry-header, .entry-content, .entry-tags, .entry-pagination, .entry-related
+			width: 100% !important
+			float: none !important
+	.entry-comments
+		width: 94% !important
+		float: none
+		footer img
+			float: none
+			margin-bottom: 5px
+	.blog-detail
+		padding-top: 3%
+		position: relative
+		.entry-header .addthis_toolbox
+			display: block !important
+			padding-top: 10px
+			height: 16px
+			span
+				float: left
+				margin-right: 10px
+				height: 16px
+	#comment-form
+		margin: 3% 0 0 0
+		padding-right: 3%
+		width: 94%
+	.comment_form
+		.btn
+			clear: both
+			margin-top: 10px
+		input
+			&[type="submit"], &[type="button"]
+				clear: both
+				margin-top: 10px
+		span
+			&.name
+				width: 90%
+			&.email
+				float: none
+				width: 100%
+		#name
+			width: 100%
+		#email, textarea, #website
+			width: 90%
+	.entry-comments footer .comment-meta
+		float: none
+		margin-left: 0
+
+/*end
+/* ==================================================
+ *	MAIN RETINA BACKGROUND IMAGE REPLACEMENT & RETINA INFORMATION
+ *==================================================
+/*	change the webkit number to 1 to test on webkit to make sure
+ *	the sizes and the images show up correctly then switch back before launch
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+	.blog-summary .entry-post, .blog-detail .entry-header
+		background-image: url(../img/retina/hr_@2x.png)
+		-moz-background-size: 3px 3px
+		/*w & h of total ORIGINAL 72dpi image
+		-ie-background-size: 3px 3px
+		-o-background-size: 3px 3px
+		-webkit-background-size: 3px 3px
+		background-size: 3px 3px
+
+/* end desktop and main retina swapping
+/*@ sourceMappingURL=blog.css.map
+/*@ sourceMappingURL=blog.css.map
+
+/*@ sourceMappingURL=blog.css.map

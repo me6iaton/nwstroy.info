@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="page-services-and-prices">
+{{ partial "header.html" . }}
+<div id="page">
+  {{range $key, $value := where .Site.Pages "Params.section" .Url }}
+    {{ partial "title.html" . }}
+  {{end}}
+  <div class="container clearfix" id="main-content">
+    <div class="row-fluid sidebar-right">
+      <div class="span9 blog-summary primary-column">
+        {{range .Data.Pages}}
+          {{if  not (isset .Params "menu")}}
+          {{ .Render "li"}}
+          {{end}}
+        {{end}}
+      </div>
+      <section class="span3 sidebar secondary-column" id="secondary-nav">
+        <aside class="widget clearfix">
+          <h5 class="short_headline"><span>Категории</span></h5>
+          <ul class="navigation">
+            {{range where .Site.Menus.main "Identifier" "posts"}}
+            {{ range .Children }}
+            <li>
+              <i class="icon-angle-right"></i>
+              <a href="{{.Url}}" title="{{ .Name }}">{{ .Name }}</a>
+            </li>
+            {{end}}
+            {{end}}
+          </ul>
+        </aside>
+        <aside class="widget clearfix">
+          <h5 class="short_headline"><span>Теги</span></h5>
+          <ul class="navigation">
+            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+            <li>
+              <i class="icon-tag"></i>
+              <a href="/tags/{{ $name | urlize }}">{{ $name }}</a>
+            </li>
+            {{ end }}
+          </ul>
+        </aside>
+      </section>
+    </div>
+  </div>
+</div>
+<footer id="footer" class="clearfix">
+  {{ partial "footer.html" . }}
+</footer>
+<span class="backToTop"><a href="#top">наверх</a></span>
+</body>
+</html>

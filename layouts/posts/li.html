@@ -1,0 +1,28 @@
+<div class="section">
+  <div class="row-fluid blog-list-heder clearfix">
+    {{$Pages := .Site.Pages}}
+    {{range .Params.categories}}
+     {{ range where $Pages "Params.category" . }}
+    <small class="pull-left"><a href="{{.RelPermalink}}">{{title .Title }}</a> / </small>
+      {{ end }}
+    {{end}}
+    <h3 class="title span8"><a href="{{.RelPermalink}}">{{.Title}}</a></h3>
+  </div>
+  <figure>
+    <a href="{{.RelPermalink}}" class="hover">
+      <img src="{{.Params.image}}=w800" alt="">
+      <span class="plus"></span>
+    </a>
+  </figure>
+  <div class="content">
+    <p>{{.Summary}}</p>
+  </div>
+  <div class="bottom-article">
+    <ul class="meta-post">
+      {{partial "post-meta.html" .}}
+      <li class="pull-right">
+        <a class="btn btn-primary" href="{{.RelPermalink}}">Читать дальше</a>
+      </li>
+    </ul>
+  </div>
+</div>

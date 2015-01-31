@@ -1,0 +1,7 @@
+<li><i class="icon-calendar"></i>{{ .Date.Format "02-01-2006" }}</li>
+<li>
+  <i class="icon black icon-tags"></i>
+  {{ range .Params.tags }}
+  <a class="tl-tag" href="/tags/{{ . | urlize }}">{{ . }}</a>
+  {{ end }}
+</li>

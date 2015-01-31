@@ -1,0 +1,34 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="page-services-and-prices">
+{{ partial "header.html" . }}
+<div id="page">
+  {{ partial "title.html" . }}
+  <div class="container clearfix" id="main-content">
+    <div class="row-fluid sidebar-right">
+      <div class="span9 primary-column blog-post">
+        <img src="{{.Params.image}}=w800"/>
+        <div class="content">{{.Content}}</div>
+        <div class="bottom-article">
+          <ul class="meta-post">
+            {{partial "post-meta.html" .}}
+          </ul>
+        </div>
+        [[TicketComments?
+        &tplComments=`tpl.Tickets.comment.wrapper.edit`
+        ]]
+      </div>
+      <section class="span3 sidebar secondary-column" id="secondary-nav">
+        {{ partial "post-aside.html" . }}
+      </section>
+    </div>
+  </div>
+<footer id="footer" class="clearfix">
+  {{ partial "footer.html" . }}
+</footer>
+<span class="backToTop"><a href="#top">наверх</a></span>
+</body>
+</html>

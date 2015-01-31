@@ -1,0 +1,50 @@
+<ul class="visuallyhidden" id="top">
+  <li><a href="#nav" title="Skip to navigation" accesskey="n">Skip to navigation</a></li>
+  <li><a href="#page" title="Skip to content" accesskey="c">Skip to content</a></li>
+</ul>
+<h5 class="mobile_nav"><a href="javascript:void(0)">&nbsp;<span></span></a></h5>
+<header class="header  clearfix">
+  <div class="container">
+    <nav id="main_menu">
+      <ul class="accordmobile">
+        <!--<li class="first active"><a href="/" title="главная">главная</a></li>-->
+        {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+          <li class="parent">
+            <a href="{{.Url}}" title="{{ .Name }}">{{ .Name }}<i></i></a>
+            <ul>
+            {{ range .Children }}
+              <li class="parent"><a href="{{.Url}}" title="{{ .Name }}">{{ .Name }}</a></li>
+            {{end}}
+            </ul>
+          </li>
+          {{else}}
+            <li class="parent"><a href="{{.Url}}" title="{{ .Name }}">{{ .Name }}</a></li>
+          {{end}}
+        {{end}}
+
+        <!--<li class="parent"><a href="/services-and-prices/" title="Услуги и цены">Услуги и цены</a></li>-->
+        <!--<li><a href="http://nwstroy.info/blog/our-works/" title="Наши работы">Наши работы</a></li>-->
+        <!--<li class="parent"><a href="/questions/" title="Вопросы">Вопросы</a></li>-->
+        <!--<li class="parent"><a href="/blog/" title="Блог">Блог<i></i></a>-->
+          <!--<ul>-->
+            <!--<li class="first parent"><a href="/blog/our-works/" title="Наши работы">Наши работы</a></li>-->
+            <!--<li class="last parent"><a href="/blog/useful-information/" title="Полезная информация">Полезная-->
+              <!--информация</a></li>-->
+          <!--</ul>-->
+        <!--</li>-->
+        <!--<li class="last"><a href="/about-us.html" title="О нас">О нас</a></li>-->
+
+
+
+      </ul>
+    </nav>
+    <div id="logo">
+      <a href="/">
+        <i class="icon-home icon-3x"></i>
+        <h2>nwstroy</h2>
+      </a>
+      <!--<h5 class="underconstr"><i class="icon-wrench"></i> Сайт в процессе разработки </h5>-->
+    </div>
+  </div>
+</header>

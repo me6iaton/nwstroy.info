@@ -1,0 +1,94 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="page-index">
+{{ partial "header.html" . }}
+<div id="page">
+  {{ partial "slider.html" . }}
+  <div class="container clearfix" id="main-content">
+    <div class="tab-pane" id="pills-basic">
+      <div class="tabbable">
+        <ul class="nav nav-pills" data-trigger="tab">
+          <li class="active"><a href="#tabs4-pane1">Услуги</a></li>
+          <li><a href="#tabs4-pane2">Типовые проекты</a></li>
+          <li><a href="#tabs4-pane3">Работы</a></li>
+          <li><a href="#tabs4-pane4">Последние посты</a></li>
+        </ul>
+        <div class="tab-content pane-wrapper">
+          <div class="tab-pane active">
+            <h3 class="short_headline"><span>Описания услуг</span></h3>
+            <div id="equalHeights" class="row-fluid equalHero">
+              {{ range where .Site.Pages "Type" "service"}}
+              <div class="span6">
+                <div class="span5">
+                  <a href="/services/#{{.Params.section}}">
+                    <img src="{{.Params.image}}=w200-h200-c" class="alignleft" alt=""/>
+                  </a>
+                </div>
+                <div class="span7">
+                  <h3><a href="[[~5]]#[[+alias]]">{{.Title}}</a></h3>
+                  <p class="introtext">{{.Description}}</p>
+                  <p class="right"><a href="/services/#{{.Params.section}}" class="btn btn-primary">Подробнее &rarr;</a></p>
+                </div>
+              </div>
+              {{ end }}
+
+            </div>
+          </div>
+          <div class="tab-pane">
+            <h3 class="short_headline"><span>Типовые проекты</span></h3>
+            <div id="equalHeightsA" class="row-fluid equalHero">
+            {{ range where .Site.Pages "Section" "services"}}
+              {{if isset .Params "section" | not}}
+              <div class="span4">
+                <a href="{{.RelPermalink}}">
+                  <img src="{{.Params.image}}=w345-h150-c" class="aligncenter" alt=""/>
+                </a>
+                <h3><a href="{{.RelPermalink}}">{{.Title}}</a></h3>
+                <p>{{.Summary}}</p>
+                <p class="right"><a href="{{.RelPermalink}}" class="btn btn-primary">Подробнее &rarr;</a></p>
+              </div>
+              {{end}}
+            {{end}}
+            </div>
+          </div>
+          <div class="tab-pane">
+            <h3 class="short_headline"><span>Наши работы</span></h3>
+            <div id="equalHeightsB" class="row-fluid equalHero equalHeights">
+            {{range .Site.Taxonomies.services}}
+              {{ range .Pages }}
+              <div class="span3">
+                <h3><a href="{{.RelPermalink}}">{{.Title}}</a></h3>
+                <p>
+                  <img class="alignleft" src="{{.Params.image}}=w80-h80-c" alt="">
+                  {{.Summary}}
+                </p>
+                <p class="right"><a href="{{.RelPermalink}}" class="btn btn-primary">Подробнее &rarr;</a></p>
+              </div>
+              {{end}}
+            {{end}}
+            </div>
+          </div>
+          <div class="tab-pane">
+            {{range first 6 (where .Site.Pages "Section" "posts")}}
+            {{if isset .Params "section" | not}}
+              <h4><a href="{{.RelPermalink}}">{{.Title}}</a></h4>
+              <p>Donec semper vestibulum dapibus. Integer et sollicitudin metus. Vivamus at nisi turpis. Phasellus vel tellus id felis cursus hendrerit. Suspendisse et arcu felis, ac gravida turpis.
+                Suspendisse potenti.</p>
+            {{end}}
+            {{end}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+</div>
+<footer id="footer" class="clearfix">
+  {{ partial "footer.html" . }}
+</footer>
+<span class="backToTop"><a href="#top">наверх</a></span>
+</body>
+</html>

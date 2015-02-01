@@ -29,25 +29,25 @@ if (document.documentElement.clientWidth > 767) { //if client width is greater t
 (function($) {
 
 if (!Modernizr.flexbox) {
-	var curHighest = 0;
-	$('.tab-pane.active .equalHero div').each(function(){
-		var el = $(this),
-		elHeight = el.height('auto').height();
-		if (elHeight > curHighest) {
-		curHighest = elHeight;
-		}
-	}).height(curHighest);
+  var curHighest = 0;
+  $('.tab-pane.active .equalHero div').each(function(){
+    var el = $(this),
+    elHeight = el.height('auto').height();
+    if (elHeight > curHighest) {
+    curHighest = elHeight;
+    }
+  }).height(curHighest);
 
-	$('.pane-wrapper').on('select', function(){
-		var curHighest = 0;
-		$(this).find('.tab-pane.active .equalHero div').each(function(){
-			var el = $(this),
-			elHeight = el.height('auto').height();
-			if (elHeight > curHighest) {
-			curHighest = elHeight;
-			}
-		}).height(curHighest);
-	});
+  $('.pane-wrapper').on('select', function(){
+    var curHighest = 0;
+    $(this).find('.tab-pane.active .equalHero div').each(function(){
+      var el = $(this),
+      elHeight = el.height('auto').height();
+      if (elHeight > curHighest) {
+      curHighest = elHeight;
+      }
+    }).height(curHighest);
+  });
 }
 
 }(jQuery));
@@ -60,10 +60,10 @@ if (!Modernizr.flexbox) {
 /*================================================================*/
 $(document).ready(function() {
 $('.image-widget li').hover(function(){
-	$(this).siblings().addClass('fade');
-	}, function(){
-	$(this).siblings().removeClass('fade');
-	});
+  $(this).siblings().addClass('fade');
+  }, function(){
+  $(this).siblings().removeClass('fade');
+  });
 });
 
 
@@ -73,10 +73,10 @@ $('.image-widget li').hover(function(){
 if (document.documentElement.clientWidth > 767) { //if client width is greater than 767px
 
 ddsmoothmenu.init({
-	mainmenuid: "main_menu",
-	orientation: 'h',
-	contentsource: "markup",
-	showhidedelay: {showdelay: 300, hidedelay: 100} //set delay in milliseconds before sub menus appear and disappear, respectively
+  mainmenuid: "main_menu",
+  orientation: 'h',
+  contentsource: "markup",
+  showhidedelay: {showdelay: 300, hidedelay: 100} //set delay in milliseconds before sub menus appear and disappear, respectively
 })
 
 } // end if
@@ -91,14 +91,14 @@ $(document).ready(function() {
 
 // accordion
 $('.accordmobile').dcAccordion({
-		eventType: 'click',
-		saveState: false,
-		autoClose: true,
-		disableLink: true,
-		speed: 'fast',
-		showCount: false,
-		autoExpand: false,
-		classExpand	 : 'parent'
+    eventType: 'click',
+    saveState: false,
+    autoClose: true,
+    disableLink: true,
+    speed: 'fast',
+    showCount: false,
+    autoExpand: false,
+    classExpand	 : 'parent'
 });
 
 });	// end document ready
@@ -112,8 +112,8 @@ $('.accordmobile').dcAccordion({
 $(document).ready(function(){
 
 $('.mobile_nav a').click(function(){
-	$('#main_menu').slideToggle(400);
-	$(this).toggleClass('active'); return false;
+  $('#main_menu').slideToggle(400);
+  $(this).toggleClass('active'); return false;
 });
 
 /*================================================================*/
@@ -125,15 +125,15 @@ $(document).ready(function(){
 var deviceAgent = navigator.userAgent.toLowerCase();
 var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
 if (agentID)   {
-	if (document.documentElement.clientWidth > 767) {
-		$('#main_menu ul li.parent').click(function(event) {
-			$(this).children('.parent').hide();
-			$('ul', this).toggle();
-			$(this).toggleClass('foo');
-			event.stopPropagation();
-	});
+  if (document.documentElement.clientWidth > 767) {
+    $('#main_menu ul li.parent').click(function(event) {
+      $(this).children('.parent').hide();
+      $('ul', this).toggle();
+      $(this).toggleClass('foo');
+      event.stopPropagation();
+  });
 
-	} //end clientWidth
+  } //end clientWidth
 
 }// end IS ipad/iphone/ipod
 
@@ -156,8 +156,8 @@ $(document).ready(function(){
 
 if ( navigator.userAgent.indexOf('iPad','iPhone','iPod') == -1 )
   {
-	// hide .backToTop first
-	$(".backToTop").hide();
+  // hide .backToTop first
+  $(".backToTop").hide();
     $(window).scroll(function(){
         if ($(this).scrollTop() > 100) {
             $('.backToTop').fadeIn();
@@ -177,8 +177,8 @@ var deviceAgent = navigator.userAgent.toLowerCase();
 var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
 if (agentID)   {
 
-	$('.backToTop').css({"position":"relative","clear":"both","margin":"0 auto","width":"100%","right":"auto","bottom":"auto"});
-	$('.backToTop a').css({"width":"100%"});
+  $('.backToTop').css({"position":"relative","clear":"both","margin":"0 auto","width":"100%","right":"auto","bottom":"auto"});
+  $('.backToTop a').css({"width":"100%"});
 
 }// end IS ipad/iphone/ipod
 
@@ -192,9 +192,9 @@ $(document).ready(function(){
 $('.search input').hide();
 $('#search-trigger').click(function(){
     $('.search input').slideToggle('fast').focus();
-	$('.preheader .user, .preheader .phone').slideToggle('fast');
-       	$(this).toggleClass('active');
-  	  });
+  $('.preheader .user, .preheader .phone').slideToggle('fast');
+        $(this).toggleClass('active');
+      });
 });
 }
 
@@ -203,8 +203,8 @@ $(document).ready(function(){
 $('.search input').hide();
 $('#search-trigger').click(function(){
     $('.search input').slideToggle('fast').focus();
-       	$(this).toggleClass('active');
-  	  });
+        $(this).toggleClass('active');
+      });
 });
 }
 
@@ -215,9 +215,9 @@ $('#search-trigger').click(function(){
 $(document).ready(function(){
 
 $('.forgot-password').hide();
-	$('.forgotpw, .forgot-password .closeforgot').click(function(){
-		$('.forgot-password').slideToggle('fast').focus();
-	});
+  $('.forgotpw, .forgot-password .closeforgot').click(function(){
+    $('.forgot-password').slideToggle('fast').focus();
+  });
 });
 
 
@@ -274,10 +274,10 @@ $(document).ready(function(){
 
 $(document).ready(function($) {
 
-	$(".scrollto, .container.visible-phone.hidden-tablet.hidden-desktop .btn").click(function(event){
-		event.preventDefault();
-		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);return false;
-	});
+  $(".scrollto, .container.visible-phone.hidden-tablet.hidden-desktop .btn").click(function(event){
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);return false;
+  });
 });
 
 
@@ -285,59 +285,62 @@ $(document).ready(function($) {
 /*	ADD ACTIVE CLASS TO MENU - DEMO only you can remove this if you want, your CMS should be set up so that the active class is added via php
 /*================================================================*/
 $(document).ready(function(){
-   var path = location.pathname.substring(1);
-   if ( path )
-	//	$('#main_menu li a[href$="' + path + '"]').parents('li').addClass('active');
-		$('#main_menu li a[href$="' + path + '"]').parents('li').last().addClass('active');
-		$('#main_menu li a[href$="' + path + '"]').parents('li').first().addClass('active');
-     	$('#main_menu li a[href$="' + path + '"]').parent('li').addClass('active');
- });
+  var uri = URI();
+  var directory = uri.directory();
+  var segment = uri.segment(0);
+  if(segment == 'posts'){
+    $('#main_menu li.parent-posts').addClass('active');
+  }
+  $('#main_menu li a, ul.navigation li a').each(function(){
+    var $this = $(this);
+    var uri = $this.uri();
+    if(uri.directory() == directory ){
+      $this.parents('li').addClass('active')
+    }
+  });
+});
 
- $(document).ready(function(){
-   var path = location.pathname.substring(1);
-   if ( path )
-          $('ul.navigation li a[href$="' + path + '"]').parents('li').addClass('active');
- });
+
 
 /*================================================================*/
 /*	slitslider init
 /*================================================================*/
-		$(function () {
-			var Page = (function () {
-				var $nav = $('#nav-dots > span'), slitslider = $('#slider').slitslider({
-					onBeforeChange: function (slide, pos) {
-						$nav.removeClass('nav-dot-current');
-						$nav.eq(pos).addClass('nav-dot-current');
-					}
-				}), init = function () {
-					initEvents();
-				}, initEvents = function () {
-					$nav.each(function (i) {
-						$(this).on('click', function (event) {
-							var $dot = $(this);
-							if (!slitslider.isActive()) {
-								$nav.removeClass('nav-dot-current');
-								$dot.addClass('nav-dot-current');
-							}
-							slitslider.jump(i + 1);
-							return false;
-						});
-					});
-				};
-				return { init: init };
-			})();
-			Page.init();
-			/**
-			 * Notes:
-			 *
-			 * example how to add items:
-			 */
-			/*
+    $(function () {
+      var Page = (function () {
+        var $nav = $('#nav-dots > span'), slitslider = $('#slider').slitslider({
+          onBeforeChange: function (slide, pos) {
+            $nav.removeClass('nav-dot-current');
+            $nav.eq(pos).addClass('nav-dot-current');
+          }
+        }), init = function () {
+          initEvents();
+        }, initEvents = function () {
+          $nav.each(function (i) {
+            $(this).on('click', function (event) {
+              var $dot = $(this);
+              if (!slitslider.isActive()) {
+                $nav.removeClass('nav-dot-current');
+                $dot.addClass('nav-dot-current');
+              }
+              slitslider.jump(i + 1);
+              return false;
+            });
+          });
+        };
+        return { init: init };
+      })();
+      Page.init();
+      /**
+       * Notes:
+       *
+       * example how to add items:
+       */
+      /*
 
-			 var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
+       var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
 
-			 // call the plugin's add method
-			 ss.add($items);
+       // call the plugin's add method
+       ss.add($items);
 
-			 */
-		});
+       */
+    });

@@ -5,6 +5,36 @@
 // Global values
 // --------------------------------------------------
 
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-org-base:              #000 !default
+$gray-org-darker:            lighten($gray-org-base, 13.5%) !default // #222
+$gray-org-dark:              lighten($gray-org-base, 20%) !default  // #333
+$gray-org:                   lighten($gray-org-base, 33.5%) !default // #555
+$gray-org-light:             lighten($gray-org-base, 46.7%) !default // #777
+$gray-org-lighter:           lighten($gray-org-base, 93.5%) !default // #eee
+
+$transparent:       rgba(0, 0, 0, 0)
+$full-black:  rgba(0, 0, 0, 1)
+$dark-black:  rgba(0, 0, 0, 0.87)
+$light-black: rgba(0, 0, 0, 0.54)
+$min-black:   rgba(0, 0, 0, 0.26)
+$faint-black: rgba(0, 0, 0, 0.12)
+$full-white:  rgba(255, 255, 255, 1)
+$dark-white:  rgba(255, 255, 255, 0.87)
+$light-white: rgba(255, 255, 255, 0.54)
+
+$grey-50:   #fafafa !default
+$grey-100:  #f5f5f5 !default
+$grey-200:  #eeeeee !default
+$grey-300:  #e0e0e0 !default
+$grey-400:  #bdbdbd !default
+$grey-500:  #9e9e9e !default
+$grey-600:  #757575 !default
+$grey-700:  #616161 !default
+$grey-800:  #424242 !default
+$grey-900:  #212121 !default
+
 // Grays
 // -------------------------
 $black: #000 !default
@@ -30,11 +60,11 @@ $purple: #7a43b6 !default
 // Scaffolding
 // -------------------------
 $bodyBackground: $white !default
-$textColor: $grayDark !default
+$textColor: $dark-black !default
 
 // Links
 // -------------------------
-$linkColor:  #23A605 !default
+$linkColor:  $grayDark !default
 $linkColorHover: darken($linkColor, 15%) !default
 
 // Typography

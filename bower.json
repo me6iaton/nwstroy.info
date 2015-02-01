@@ -14,6 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "SlitSlider": "codrops/SlitSlider"
+    "SlitSlider": "codrops/SlitSlider",
+    "uri.js": "~1.14.1"
   }
 }

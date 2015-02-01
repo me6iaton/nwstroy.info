@@ -8,5 +8,6 @@ menu:
     weight: 20
     parent: "posts"
     url: '/posts/info/'
+    identifier: "works"
 
 ---

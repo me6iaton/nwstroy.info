@@ -7,36 +7,20 @@
   <div class="container">
     <nav id="main_menu">
       <ul class="accordmobile">
-        <!--<li class="first active"><a href="/" title="главная">главная</a></li>-->
         {{ range .Site.Menus.main }}
           {{ if .HasChildren }}
-          <li class="parent">
+          <li class="parent parent-{{.Identifier}}">
             <a href="{{.Url}}" title="{{ .Name }}">{{ .Name }}<i></i></a>
             <ul>
             {{ range .Children }}
-              <li class="parent"><a href="{{.Url}}" title="{{ .Name }}">{{ .Name }}</a></li>
+              <li><a href="{{.Url}}" title="{{ .Name }}">{{ .Name }}</a></li>
             {{end}}
             </ul>
           </li>
           {{else}}
-            <li class="parent"><a href="{{.Url}}" title="{{ .Name }}">{{ .Name }}</a></li>
+            <li><a href="{{.Url}}" title="{{ .Name }}">{{ .Name }}</a></li>
           {{end}}
         {{end}}
-
-        <!--<li class="parent"><a href="/services-and-prices/" title="Услуги и цены">Услуги и цены</a></li>-->
-        <!--<li><a href="http://nwstroy.info/blog/our-works/" title="Наши работы">Наши работы</a></li>-->
-        <!--<li class="parent"><a href="/questions/" title="Вопросы">Вопросы</a></li>-->
-        <!--<li class="parent"><a href="/blog/" title="Блог">Блог<i></i></a>-->
-          <!--<ul>-->
-            <!--<li class="first parent"><a href="/blog/our-works/" title="Наши работы">Наши работы</a></li>-->
-            <!--<li class="last parent"><a href="/blog/useful-information/" title="Полезная информация">Полезная-->
-              <!--информация</a></li>-->
-          <!--</ul>-->
-        <!--</li>-->
-        <!--<li class="last"><a href="/about-us.html" title="О нас">О нас</a></li>-->
-
-
-
       </ul>
     </nav>
     <div id="logo">

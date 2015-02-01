@@ -17,12 +17,14 @@
       <section>
         <h4>Последние блог посты</h4>
         <ul class="footerPosts">
-          <li><a href="blog-single.html">We will amplify our power to benchmark</a> <span class="meta">December 10, 2012</span></li>
-          <li><a href="blog-single.html">Crisp has revolutionized the conceptualization of structuring</a> <span class="meta">September 10, 2012</span></li>
-          <li><a href="blog-single.html">A company that can implement correctly</a> <span class="meta">September 10, 2012</span></li>
-          <li><a href="blog-single.html">Claritas est etiam processus dynamicus</a> <span class="meta">September 10, 2012</span></li>
-          <li><a href="blog-single.html">It is stunning to you!</a> <span class="meta">September 10, 2012</span></li>
-          <li><a href="blog-single.html">We will increase our aptitude to evolve </a> <span class="meta">November 15, 2012</span></li>
+          {{range first 6 (where .Site.Pages "Section" "posts")}}
+          {{if isset .Params "section" | not}}
+          <li>
+            <a href="{{.RelPermalink}}">{{.Title}}</a>
+            <span class="meta">{{ .Date.Format "02.01.2006" }}</span>
+          </li>
+          {{end}}
+          {{end}}
         </ul>
       </section>
     </div>

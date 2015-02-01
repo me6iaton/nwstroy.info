@@ -75,8 +75,7 @@
             {{range first 6 (where .Site.Pages "Section" "posts")}}
             {{if isset .Params "section" | not}}
               <h4><a href="{{.RelPermalink}}">{{.Title}}</a></h4>
-              <p>Donec semper vestibulum dapibus. Integer et sollicitudin metus. Vivamus at nisi turpis. Phasellus vel tellus id felis cursus hendrerit. Suspendisse et arcu felis, ac gravida turpis.
-                Suspendisse potenti.</p>
+              <p>{{.Summary}}</p>
             {{end}}
             {{end}}
           </div>

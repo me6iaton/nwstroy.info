@@ -7,3 +7,9 @@ Taxonomies:
     category: "categories"
     post: "posts"
     service: "services"
+menu:
+  main:
+      - Name: "наши работы"
+        Weight: 40
+        Url: "/posts/works/"
+

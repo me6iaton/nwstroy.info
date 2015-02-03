@@ -1,11 +1,9 @@
 ---
-
 title: "Типовой проект 3"
 weight: 30
 image: "https://lh6.googleusercontent.com/jpdybeIcmG3CsCYaIJ1YBGL8KcLZBzwAEl1gjfcllA"
 services:
   - category-1
-
 ---
 
 Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я.

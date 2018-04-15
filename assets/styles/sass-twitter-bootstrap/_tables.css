@@ -1,0 +1,65 @@
+/*
+Syntax error: Undefined variable: "$tableBackground".
+        on line 10 of _tables.sass
+
+5: // BASE TABLES
+6: // -----------------
+7: 
+8: table
+9:   max-width: 100%
+10:   background-color: $tableBackground
+11:   border-collapse: collapse
+12:   border-spacing: 0
+13: 
+14: // BASELINE STYLES
+15: // ---------------
+
+Backtrace:
+_tables.sass:10
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/script/variable.rb:49:in `_perform'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/script/node.rb:50:in `perform'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:301:in `visit_prop'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:325:in `visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/root_node.rb:36:in `css_tree'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/engine.rb:351:in `_render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/engine.rb:282:in `render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin/compiler.rb:323:in `update_stylesheet'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin/compiler.rb:182:in `block in update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin/compiler.rb:179:in `each'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin/compiler.rb:179:in `update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin.rb:81:in `update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/exec.rb:456:in `watch_or_update'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/exec.rb:317:in `process_result'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/exec.rb:41:in `parse'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/exec.rb:21:in `parse!'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/bin/sass:9:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$tableBackground\".\A         on line 10 of _tables.sass\A \A 5: // BASE TABLES\A 6: // -----------------\A 7: \A 8: table\A 9:   max-width: 100%\A 10:   background-color: $tableBackground\A 11:   border-collapse: collapse\A 12:   border-spacing: 0\A 13: \A 14: // BASELINE STYLES\A 15: // ---------------"; }

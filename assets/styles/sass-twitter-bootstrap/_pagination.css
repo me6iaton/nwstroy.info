@@ -1,0 +1,69 @@
+/*
+Syntax error: Undefined variable: "$baseLineHeight".
+        on line 7 of _pagination.sass
+
+2: // Pagination (multiple pages)
+3: // --------------------------------------------------
+4: 
+5: // Space out pagination from surrounding content
+6: .pagination
+7:   margin: $baseLineHeight 0
+8:   text-align: center
+9: 
+10: .pagination ul
+11:   // Allow for text-based alignment
+12:   display: inline-block
+
+Backtrace:
+_pagination.sass:7
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/script/variable.rb:49:in `_perform'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/script/node.rb:50:in `perform'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/script/list.rb:70:in `block in _perform'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/script/list.rb:70:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/script/list.rb:70:in `_perform'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/script/node.rb:50:in `perform'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:301:in `visit_prop'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:325:in `visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/root_node.rb:36:in `css_tree'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/engine.rb:351:in `_render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/engine.rb:282:in `render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin/compiler.rb:323:in `update_stylesheet'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin/compiler.rb:182:in `block in update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin/compiler.rb:179:in `each'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin/compiler.rb:179:in `update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin.rb:81:in `update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/exec.rb:456:in `watch_or_update'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/exec.rb:317:in `process_result'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/exec.rb:41:in `parse'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/exec.rb:21:in `parse!'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/bin/sass:9:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$baseLineHeight\".\A         on line 7 of _pagination.sass\A \A 2: // Pagination (multiple pages)\A 3: // --------------------------------------------------\A 4: \A 5: // Space out pagination from surrounding content\A 6: .pagination\A 7:   margin: $baseLineHeight 0\A 8:   text-align: center\A 9: \A 10: .pagination ul\A 11:   // Allow for text-based alignment\A 12:   display: inline-block"; }

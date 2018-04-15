@@ -1,0 +1,272 @@
+/* gallery/masonry/folio items
+ *==================================================
+
+.gallery
+  img
+    width: 100%
+  position: relative
+  left: -1%
+  width: 102.87%
+  margin: 0
+  padding: 2px 0 0 0
+  list-style: none
+  clear: both
+  li
+    float: left
+    width: 22.25%
+    margin: 0 1% 20px 1%
+    padding: 0 0 5px 0
+    background: url(../img/5p.png)
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+  &.four_col li
+    width: 22.25%
+  &.three_col li
+    width: 31%
+  &.two_col li
+    width: 47%
+
+/* column  settings
+
+.three_col li h4, .four_col li h4
+  overflow: hidden
+  /* long words chop off at small sizes due to skinniness of 3 or 4 columns
+  font-size: 120%
+
+.gallery
+  li img
+    width: 100% !important
+    max-width: none
+  img
+    background: white url(../img/loader.gif) no-repeat 50% 50%
+  li
+    .entry-summary
+      padding: 0 10px
+    h4
+      padding: 0 0 5px 0
+      margin: 10px 0 0 0
+    .entry-summary
+      a
+        text-decoration: none
+      p
+        font-size: 85%
+    .categories
+      font-size: 11px
+      font-size: 1.1rem
+      width: auto
+      text-align: left
+      margin-top: 5px
+      padding: 5px 0 0 0
+      border-top: 1px solid #fff
+      a
+        text-decoration: none
+        display: inline
+    a
+      &.videoicon, &.hover
+        position: relative
+        display: block
+      &.videoicon span.videoicon
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 25px
+        height: 25px
+        display: block
+        background: white url(../img/videoicon.png) no-repeat
+        z-index: 10
+        border-top: 1px solid #fff
+        border-left: 1px solid #fff
+    span.credit
+      font-size: xx-small
+      position: relative
+      padding: 5px 0 0 0
+      margin: 0
+      display: block
+      text-align: right
+      a
+        text-decoration: none
+      text-decoration: none
+  &.lightbox li
+    padding: 0
+    .entry-summary
+      display: none
+
+/* gallery "item" contents (summary, captions, etc)
+
+/* photo credit
+
+/* photo credit
+
+/* portfolio lightbox styles
+
+/* filter
+ *==================================================
+
+#filter
+  display: none
+
+.filter-box
+  width: 100%
+
+.sort
+  float: left
+  position: relative
+  list-style: none
+  margin: 0 0 10px 0
+  padding: 0 0 10px 0
+  background: none
+  top: auto
+  width: auto
+  border: none
+  li
+    padding: 0 10px 0 0
+    margin: 0
+    display: inline
+    position: relative
+    a
+      padding: 0
+      text-decoration: none
+      color: #000
+      line-height: normal
+    &:after
+      content: "\00b7"
+      padding-left: 10px
+      color: #777777
+    &.last-child:after
+      content: ""
+
+ul.sort li.last:after
+  content: ""
+
+.sort
+  li a:hover, a.active
+    color: #53a3b7
+    background: none
+
+/** keeping some old stuff in case *
+/*.sort li.first,
+ *ul.sort li:first-child { border-left: none }
+ *.sort li.first a,
+ *ul.sort li:first-child a { padding-left: 0 }
+ *.sort li.last-child,
+ *ul.sort li.last { border-right: none }
+
+/* no javascript
+
+.no-js
+  .gallery
+    margin-top: 20px
+  .sort, .entry-summary, .categories, span.credit
+    display: none !important
+  .gallery li
+    height: 200px
+    overflow: hidden
+
+/* media queries for mobile max width 767
+ *==================================================
+@media only screen and (max-width: 767px)
+  .gallery
+    li, &.four_col li, &.three_col li, &.two_col li
+      width: 44.5%
+  /* filter for isotope navigation mobile version
+  .no-js
+    .filter-box, .sort
+      display: none
+  .filter-box
+    position: relative
+  #filter
+    display: block
+    width: 185px
+    font-weight: normal
+    color: #fff
+    line-height: 30px
+    height: 30px
+    padding: 5px 5px 5px 10px
+    margin-bottom: 10px
+    background: #484f56
+    cursor: pointer
+    position: relative
+  .sort
+    position: absolute
+    top: 40px
+    background: #333
+    width: 200px
+    display: none
+    z-index: 20
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+      float: none
+      padding: 0
+      border: none
+      a
+        display: block
+        text-decoration: none
+        padding: 2px 8px
+        color: #fff
+        float: none
+        line-height: 30px
+        position: relative
+      &:after
+        content: ""
+        padding-left: 0
+        color: #777777
+      a:hover
+        background: #dddddd
+      &.first a
+        padding: 2px 8px
+        border: none
+  ul.sort li:first-child a
+    padding: 2px 8px
+    border: none
+  #filter
+    i
+      position: absolute
+      top: 5px
+      right: 10px
+      display: block
+    &.active i:before
+      content: "\f0dd"
+
+/*end max width 767
+
+/* max width 500px
+ *==================================================
+@media only screen and (max-width: 500px)
+  .gallery
+    &.three_col li, &.four_col li, &.two_col li
+      width: 98%
+      margin: 0 1% 10px 1%
+
+/*end
+
+/* ==================================================
+ *	38. RETINA BACKGROUND IMAGE REPLACEMENT & RETINA INFORMATION
+ *	http://weedygarden.net/2012/04/hi-res-retina-display-css-sprites/
+ *	http://www.kylejlarson.com/blog/2012/creating-retina-images-for-your-website/
+ *	http://www.webresourcesdepot.com/3-solutions-for-serving-high-res-images-to-retina-display-devices/
+ *==================================================
+
+/*	change the webkit number to 1 to test on webkit to make sure
+ *	the sizes and the images show up correctly then switch back before launch
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+  .gallery
+    img
+      background-image: url(../img/retina/loader_@2x.gif)
+      -moz-background-size: 80px 10px
+      -ie-background-size: 80px 10px
+      -o-background-size: 80px 10px
+      -webkit-background-size: 80px 10px
+      background-size: 80px 10px
+    li a.videoicon span.videoicon
+      background-image: url(../img/retina/videoicon_@2x.png)
+      -moz-background-size: 25px 25px
+      -ie-background-size: 25px 25px
+      -o-background-size: 25px 25px
+      -webkit-background-size: 25px 25px
+      background-size: 25px 25px
+
+/* end retina

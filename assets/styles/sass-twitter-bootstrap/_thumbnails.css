@@ -1,0 +1,67 @@
+/*
+Syntax error: Undefined variable: "$gridGutterWidth".
+        on line 9 of _thumbnails.sass
+
+4: 
+5: // Note: `.thumbnails` and `.thumbnails > li` are overriden in responsive files
+6: 
+7: // Make wrapper ul behave like the grid
+8: .thumbnails
+9:   margin-left: -$gridGutterWidth
+10:   list-style: none
+11:   +clearfix
+12: 
+13: // Fluid rows have no left margin
+14: .row-fluid .thumbnails
+
+Backtrace:
+_thumbnails.sass:9
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/script/variable.rb:49:in `_perform'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/script/node.rb:50:in `perform'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/script/unary_operation.rb:57:in `_perform'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/script/node.rb:50:in `perform'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:301:in `visit_prop'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:325:in `visit_rule'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/root_node.rb:36:in `css_tree'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/engine.rb:351:in `_render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/engine.rb:282:in `render_with_sourcemap'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin/compiler.rb:323:in `update_stylesheet'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin/compiler.rb:182:in `block in update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin/compiler.rb:179:in `each'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin/compiler.rb:179:in `update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/plugin.rb:81:in `update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/exec.rb:456:in `watch_or_update'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/exec.rb:317:in `process_result'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/exec.rb:41:in `parse'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/lib/sass/exec.rb:21:in `parse!'
+/var/lib/gems/1.9.1/gems/sass-3.3.0.alpha.121/bin/sass:9:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$gridGutterWidth\".\A         on line 9 of _thumbnails.sass\A \A 4: \A 5: // Note: `.thumbnails` and `.thumbnails > li` are overriden in responsive files\A 6: \A 7: // Make wrapper ul behave like the grid\A 8: .thumbnails\A 9:   margin-left: -$gridGutterWidth\A 10:   list-style: none\A 11:   +clearfix\A 12: \A 13: // Fluid rows have no left margin\A 14: .row-fluid .thumbnails"; }

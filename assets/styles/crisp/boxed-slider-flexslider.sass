@@ -1,0 +1,194 @@
+.boxed-slider.flexslider
+  zoom: 1
+  max-width: 1100px
+  margin: 0 auto
+  padding: 0
+  clear: both
+  overflow: hidden
+  z-index: 2
+  .slides
+    zoom: 1
+    > li
+      display: none
+      -webkit-backface-visibility: hidden
+      position: relative
+    img
+      display: block
+
+/* Custom Content Slider
+ *********************************
+
+.boxed-slider-wrapper
+  position: relative
+  clear: both
+  background: url(../img/7p.png) fixed
+  margin: 30px 0 3% 0
+  padding: 10px 60px 10px 60px
+
+/* captions
+ *********************************
+
+.boxed-slider.flexslider
+  .caption
+    position: absolute
+    top: 5%
+    left: 0
+    background: url(../img/80pwhite.png) fixed
+    padding: 15px
+    width: 35%
+    h2
+      font-size: 200%
+      margin-bottom: 2%
+  .flex-direction-nav
+    *height: 0
+    .flex-disabled
+      display: none !important
+      cursor: default
+    a
+      &.flex-next
+        cursor: pointer
+        position: absolute
+        z-index: 200
+        height: 50px
+        right: 8px
+        text-indent: -9999px
+        display: block
+        top: 40%
+        width: 40px
+        height: 80px
+        background: url(../img/sliderarrows.png) -140px 50% no-repeat
+      &.flex-prev
+        cursor: pointer
+        position: absolute
+        z-index: 200
+        height: 50px
+        right: 8px
+        text-indent: -9999px
+        display: block
+        top: 40%
+        width: 40px
+        height: 80px
+        background: url(../img/sliderarrows.png) -140px 50% no-repeat
+        left: 8px
+        right: auto
+        background-position: -180px 50%
+  .flex-prev:hover, .flex-next:hover
+    opacity: 0.5
+  .flex-control-nav
+    position: absolute
+    text-align: center
+    margin: 0 auto
+    left: 0
+    bottom: -30px
+    width: 100%
+    padding: 10px 0 0 0
+    z-index: 100
+    overflow: hidden
+    li
+      margin: 0 0 0 5px
+      display: inline-block
+      zoom: 1
+      *display: inline
+  .flex-control-paging li a
+    width: 5px
+    height: 5px
+    display: block
+    background: #a3b0bb
+    cursor: pointer
+    text-indent: 9999px
+    &:hover
+      background: #2ba4c2
+    &.flex-active
+      background: #2ba4c2
+      cursor: default
+
+/* direction navigation
+ *********************************
+/* control navigation
+ *********************************
+/* paging
+ *********************************
+/* device width 600 px to 800 px
+ *==================================================
+@media only screen and (min-width: 600px) and (max-width: 800px)
+  .boxed-slider.flexslider
+    .caption h2
+      font-size: 180%
+      line-height: 1.2
+    p
+      font-size: 100%
+      line-height: 1.5
+      text-align: left
+
+/* end
+/* up to 767px wide
+ *==================================================
+@media only screen and (max-width: 767px)
+  .boxed-slider-wrapper
+    margin: 10px 0 4% 0
+    padding: 1% 35px
+  .boxed-slider.flexslider
+    .caption
+      clear: both
+      position: relative
+      bottom: auto
+      padding: 10px
+      width: auto
+      margin: 0
+      background: white
+    .img, .video-wrapper
+      float: none
+      width: 100%
+    .img img
+      width: auto
+      max-width: 100%
+      margin: 0 auto
+    .caption h2
+      text-align: center
+      font-size: 140%
+      line-height: 1.2
+    p
+      font-size: 100%
+      line-height: 1.5
+      text-align: center
+    .img span, .video-wrapper span
+      padding: 5px 0
+      text-align: center
+    .flex-direction-nav a
+      &.flex-next
+        background-position: -220px 50%
+        width: 30px
+        height: 50px
+        right: 5px
+      &.flex-prev
+        background-position: -250px 50%
+        width: 30px
+        left: 5px
+        height: 50px
+    .flex-control-nav
+      text-align: center
+      position: relative
+      bottom: auto
+    .flex-control-paging li a
+      width: 10px
+      height: 10px
+
+/* end
+/* ==================================================
+ *	MAIN RETINA BACKGROUND IMAGE REPLACEMENT & RETINA INFORMATION
+ *==================================================
+/*	change the webkit number to 1 to test on webkit to make sure
+ *	the sizes and the images show up correctly then switch back before launch
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+  .boxed-slider.flexslider .flex-direction-nav a
+    &.flex-next, &.flex-prev
+      background-image: url(../img/retina/sliderarrows_@2x.png)
+      -moz-background-size: 360px 100px
+      -ie-background-size: 360px 100px
+      -o-background-size: 360px 100px
+      -webkit-background-size: 360px 100px
+      background-size: 360px 100px
+
+/* end desktop and main retina swapping
+
+/*@ sourceMappingURL=boxed-slider-flexslider.css.map

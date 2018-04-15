@@ -1,6 +1,6 @@
 ---
 
-title: "Категория новая"
+title: "Категория 1"
 description: "Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца."
 image: "https://lh6.googleusercontent.com/YhFN0axM7BRKQwbdF9An4u7IJWH9it_NvRhrVPKIIA"
 type: "service"
@@ -14,10 +14,3 @@ weight: 10
 Услуга  | 30
 Услуга  | 2
 Услуга 3| 2
-
-
-### test
-
-тест
-
-тест
